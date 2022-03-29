@@ -5,7 +5,7 @@
 #include "Attaque.h"
 
 class Animal {
-private:
+protected:
     std::string nom;
     int x; // abscisse de l'animal
     int y; // ordonnée de l'animal
