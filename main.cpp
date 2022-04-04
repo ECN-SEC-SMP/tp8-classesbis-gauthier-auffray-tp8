@@ -1,18 +1,23 @@
 #include <iostream>
-
-void affichage(int maxX, int maxY);
+#include <time.h>
+#include <cstdlib>
+#include <vector>
+#include "Animal.h"
+#include "Lion.h"
+#include "Ours.h"
+#include "Pierre.h"
+#include "Loup.h"
+#include "jeu.h"
 
 int main() {
-    int maxX = 10;
-    int maxY = 10;
-    int a = -6;
-    int b = a % 4;
-    a %= 4;
-    std::cout << b << std::endl;
+    srand(time(NULL));
+
+    int maxX = 3;
+    int maxY = 3;
+    std::vector<Animal*>list_animaux;
+
+    
+    affichage(maxX, maxY);
 
     return 0;
-}
-
-void affichage(int maxX, int maxY) {
-
 }
