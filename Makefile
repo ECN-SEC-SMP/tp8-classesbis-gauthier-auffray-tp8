@@ -5,8 +5,8 @@ rebuild : clean all
 clean :
 	del *.o
 
-prog_tp8 : main.o Attaque.o Animal.o Lion.o Ours.o Pierre.o Loup.o
-	g++ -o prog_tp8.exe main.o Attaque.o Animal.o Lion.o Ours.o Pierre.o Loup.o
+prog_tp8 : main.o Attaque.o Animal.o Lion.o Ours.o Pierre.o Loup.o jeu.o
+	g++ -o prog_tp8.exe main.o Attaque.o Animal.o Lion.o Ours.o Pierre.o Loup.o jeu.o
 
 main.o : main.cpp
 	g++ -o main.o -c main.cpp
@@ -28,3 +28,6 @@ Pierre.o : Pierre.cpp
 
 Loup.o : Loup.cpp
 	g++ -o Loup.o -c Loup.cpp
+
+jeu.o : jeu.cpp
+	g++ -o jeu.o -c jeu.cpp
