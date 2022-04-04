@@ -2,8 +2,8 @@ all : TP8
 
 rebuild : clean all
 
-TP8 : main.o animal.o pierre.o loup.o attaque.o
-	g++ -o TP8 main.o animal.o pierre.o loup.o attaque.o
+TP8 : main.o animal.o pierre.o loup.o lion.o ours.o attaque.o
+	g++ -o TP8 main.o animal.o pierre.o loup.o attaque.o lion.o ours.o
 	del *.o
 
 main.o : main.cpp 
@@ -17,6 +17,12 @@ pierre.o : pierre.cpp
 
 loup.o : loup.cpp 
 	g++ -o loup.o -c loup.cpp
+
+lion.o : lion.cpp 
+	g++ -o lion.o -c lion.cpp
+
+ours.o : ours.cpp 
+	g++ -o ours.o -c ours.cpp
 
 attaque.o : attaque.cpp 
 	g++ -o attaque.o -c attaque.cpp

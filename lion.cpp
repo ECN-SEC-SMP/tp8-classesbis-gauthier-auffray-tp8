@@ -54,5 +54,6 @@ void Lion::deplace(int maxX, int maxY) {
                 else this->setY((this->getY() - 1));    //sinon on la décrémente
             break;
         default:
+            break;
     }
 }

@@ -90,5 +90,6 @@ void Ours::deplace(int maxX, int maxY) {
                 this->setY((this->getY() + 2) % maxY);
             break;
         default:
+            break;
     }
 }
