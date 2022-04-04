@@ -1,0 +1,27 @@
+all : TP8
+
+rebuild : clean all
+
+TP8 : main.o animal.o pierre.o loup.o attaque.o
+	g++ -o TP8 main.o animal.o pierre.o loup.o attaque.o
+	del *.o
+
+main.o : main.cpp 
+	g++ -o main.o -c main.cpp
+
+animal.o : animal.cpp 
+	g++ -o animal.o -c animal.cpp
+
+pierre.o : pierre.cpp 
+	g++ -o pierre.o -c pierre.cpp
+
+loup.o : loup.cpp 
+	g++ -o loup.o -c loup.cpp
+
+attaque.o : attaque.cpp 
+	g++ -o attaque.o -c attaque.cpp
+
+clean :
+	del *.o
+
+#Pour ensuite executer : mingw32-make all puis .\TP8.exe
